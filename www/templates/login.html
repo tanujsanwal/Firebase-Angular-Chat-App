@@ -1,0 +1,31 @@
+<header-bar
+        title="'Enter '"
+        left-buttons="leftButtons"
+
+        type="bar-energized"
+        align-title="center">
+</header-bar>
+
+<view>
+    <content>
+        <br><br>
+
+        <form ng-submit="doLogin()">
+            <div class="list">
+                <h3 style="color:#0c63ee;padding:4%;margin-top:10px;">Please Enter Your Facebook  User Name </h3 >
+                <label class="item item-input">
+                    <span class="input-label slideLeft" style="color:#0c63ee">Username</span>
+                    <input type="text" ng-model="loginData.username" required/>
+                </label>
+
+                <label class="item">
+                    <center>  <button class="button button-full button-positive" type="submit">Log in</button>
+                    </center>
+                </label>
+            </div>
+        </form>
+
+   <!--     <button class="md-raised md-primary" ng-click="dofb()" >fb Log in</button>-->
+
+    </content>
+</view>
