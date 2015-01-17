@@ -18,7 +18,7 @@
     <div ng-repeat="message in messages | orderBy:'created_at'" type="item-text-wrap" ng-show="message.content">
       <div class="item item-body message">
         <div class="row">
-          <div class="col col-25 author">{{message.created_by}}<br> <img src="{{message.pic}}"/></div>
+          <div class="col col-25 author">{{message.created_by}}<br> <img src="{{message.pic}}" style="width:50px"/></div>
           <div class="col content">{{message.content}}</div>
           <div class="col col-25 time">{{message.created_at | dateToday: 'short' }}</div>
         </div>

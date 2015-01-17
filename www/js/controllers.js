@@ -1,7 +1,7 @@
 angular.module('chatRoom.controllers', [])
 
 .controller('RoomListCtrl', function($scope, $timeout, $firebase, $location) {
-  var ref = new Firebase('https://tanchat.firebaseio.com/opened_rooms');
+  var ref = new Firebase('https://funchatapp.firebaseio.com/opened_rooms');
   $scope.rooms = $firebase(ref);
 
 
@@ -28,7 +28,7 @@ angular.module('chatRoom.controllers', [])
 
      /* $scope.loginData = {username:"tanuj1@techanipr.com", password:"tanuj" };
       // Perform the login action when the user submits the login form
-      var ref1 = new Firebase("https://tanchat.firebaseio.com/users");
+      var ref1 = new Firebase("https://funchatapp.firebaseio.com/users");
       $scope.username = $firebase(ref1.username);
       $scope.password = $firebase(ref1.password);
       alert($firebase(ref1.password));
@@ -51,7 +51,7 @@ else{
     })
 
 .controller('RoomCreateCtrl', function($scope, $timeout, $firebase, $location) {
-  var ref = new Firebase('https://tanchat.firebaseio.com/opened_rooms');
+  var ref = new Firebase('https://funchatapp.firebaseio.com/opened_rooms');
   $scope.rooms = $firebase(ref);
 
   $scope.createRoom = function(roomName, roomDescription) {
@@ -83,8 +83,8 @@ else{
 
 
 .controller('RoomCtrl', function($scope, $stateParams, $timeout, $firebase, $location, $ionicScrollDelegate) {
-  var roomRef = new Firebase('https://tanchat.firebaseio.com/opened_rooms/');
-  var messagesRef = new Firebase('https://tanchat.firebaseio.com/rooms/' + $stateParams.roomId);
+  var roomRef = new Firebase('https://funchatapp.firebaseio.com/opened_rooms/');
+  var messagesRef = new Firebase('https://funchatapp.firebaseio.com/rooms/' + $stateParams.roomId);
 
   $scope.newMessage = "";
   $scope.roomsObj = $firebase(roomRef);
@@ -156,7 +156,7 @@ else{
         $scope.doLogin = function () {
 
 
-        var ref = new Firebase("https://tanchat.firebaseio.com/");
+        var ref = new Firebase("https://funchatapp.firebaseio.com/");
         var auth = $firebaseAuth(ref);
         auth.$authWithOAuthPopup("facebook").then(function (authData) {
 
@@ -168,7 +168,7 @@ else{
 
     }
 
-     /* var roomRef1 = new Firebase('https://tanchat.firebaseio.com/opened_rooms/users');
+     /* var roomRef1 = new Firebase('https://funchatapp.firebaseio.com/opened_rooms/users');
 
       $scope.roomsObj1 = $firebase(roomRef1);
 
@@ -177,7 +177,7 @@ alert($scope.roomsObj1.username);
       */
      /* $scope.dofb =function() {
         var isNewUser = true;
-        var ref = new Firebase("https://tanchat.firebaseio.com");
+        var ref = new Firebase("https://funchatapp.firebaseio.com");
 
         ref.authWithOAuthPopup("facebook", function (error, authData) {
           if (!error) {
